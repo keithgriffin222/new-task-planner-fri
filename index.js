@@ -75,6 +75,9 @@ if (validationFail > 0) {
 }
 });
 
+
+
+//DONT USE THIS CODE!!!
 /*const taskName = document.querySelector("#taskname");
 const taskDescription = document.querySelector("#taskdescription");
 const taskAssign = document.querySelector("#taskassign");
@@ -124,4 +127,4 @@ function validFormFieldInput(data) {
             fields[i].classList.remove("is-invalid");
             fields[i].classList.add("is-valid");
           }
-        }*
+        }*/

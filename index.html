@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Our Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+
+  <body>
+
+        <header class="text-center">
+            <h1>Task Manager</h1>
+        </header>
+
+            <!-- Modal Start -->
+        <!-- Add Task Button -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-primary center" id="buttonModal" data-toggle="modal" data-target="#exampleModal">
+                        Add Task
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Task</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+
+                                <!-- Form Start -->
+                                <form id=taskForm>
+                                            <div class="form-group">
+                                                <label class="name">Task</label>
+                                                <input type="text" class="form-control" id="new-task-name" placeholder="" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Description</label>
+                                                <textarea class="form-control" id="new-task-description" rows="3" required></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="name">Assigned To</label>
+                                                <input type="text" class="form-control" id="new-task-assigned-to" placeholder="" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="newTaskDueDate">Due Date</label>
+                                                <span id="taskdate"></span>
+                                                <input type="date" class="form-control" id="new-task-due-date" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Status</label>
+                                                <select class="form-control" id="new-task-status" required>
+                                                    <option>To Do</option>
+                                                    <option>In Progress</option>
+                                                    <option>Review</option>
+                                                    <option>Done</option>
+                                                </select>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <!-- <span id="errorMessage"></span>
+                                                <input type="text" class="form-control m-3" /> <br /> -->
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal" id= "btnClose">Close</button>
+                                                <button type="submit" class="btn btn-primary" id = "btnSubmit">Save changes</button>
+                                            </div>
+                                </form>
+                                 <!-- Form End -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Modal End -->
+
+        <!-- Card Start -->
+        <div class="container" id="taskCards">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="card bg-light">
+                                <div class="card-body">
+                                <span class="badge badge-success">TODO</span>
+                                <h5 class="card-title">Clean the Kitchen</h5>
+                                <p class="card-text">Sweep the floor, clean the pans and wipe the tables.</p>
+                                <p class="card-text font-weight-bold">John</p>
+                                <p class="card-text">10/5/2022</p>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="card bg-light">
+                                <div class="card-body">
+                                <span class="badge badge-success">TODO</span>
+                                <h5 class="card-title">Fill the soda machine</h5>
+                                <p class="card-text">Fill it with Coke, Sprite, Fanta & water.</p>
+                                <p class="card-text font-weight-bold">Mandy</p>
+                                <p class="card-text">10/7/2022</p>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                    <div class="card bg-light">
+                                    <div class="card-body">
+                                    <span class="badge badge-success">TODO</span>
+                                    <h5 class="card-title">Stock the ingredients</h5>
+                                    <p class="card-text">Stock the fridge and cupboards.</p>
+                                    <p class="card-text font-weight-bold">Kyle</p>
+                                    <p class="card-text">11/9/2022</p>
+                                    <button type="button" class="btn btn-primary">Edit</button>
+                                    <button type="button" class="btn btn-danger">Delete</button>
+                                    </div>
+                                    </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="card bg-light">
+                                <div class="card-body">
+                                <span class="badge badge-success">TODO</span>
+                                <h5 class="card-title">Cook the burgers</h5>
+                                <p class="card-text">Fry the patties and organise the burger indredients in the correct order.</p>
+                                <p class="card-text font-weight-bold">Sarah</p>
+                                <p class="card-text">11/20/2022</p>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="card bg-light">
+                                <div class="card-body">
+                                <span class="badge badge-success">TODO</span>
+                                <h5 class="card-title">Serve the customers</h5>
+                                <p class="card-text">Take the orders from the customers and serve them food.</p>
+                                <p class="card-text font-weight-bold">Daniel</p>
+                                <p class="card-text">12/4/2022</p>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                                </div>
+                                </div></li>
+                          </ul>
+                    </div>
+                </div>
+        </div>
+             <!-- Card End -->
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS, then JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+  </body>
+</html>

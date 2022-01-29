@@ -80,7 +80,7 @@ if (validationFail > 0) {
 // Finding and Display the Date Object
 const dateElement = document.querySelector("#date-element");
 let today = new Date();
-const [month, day, year] = [today.getMonth(), today.getDate(), today.getFullYear()];
+const [month, day, year] = [today.getMonth() +1, today.getDate(), today.getFullYear()];
 let dateString = `Current Date: ${day} / ${month} / ${year}`;
 dateElement.innerHTML = dateString;
 

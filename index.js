@@ -1,7 +1,8 @@
+// TASK 4
 const taskForm = document.querySelector("#taskForm");
-console.log(taskForm.value);
+//console.log(taskForm.value);
 
-form.addEventListener("submit", (event) => {
+taskForm.addEventListener("submit", (event) => {
   const validateName = document.querySelector("#new-task-name");
   const validateDescription = document.querySelector("#new-task-description");
   const validateAssignedTo = document.querySelector("#new-task-assigned-to");
@@ -57,12 +58,12 @@ if (validateDueDate.value) {
   validationFail++;
 }
 // Form validation for Task Status Field not empty
-if (validateAssignedTo.value) {
-  validateAssignedTo.classList.add("is-valid");
-  validateAssignedTo.classList.remove("is-invalid");
+if (validateStatus.value) {
+  validateStatus.classList.add("is-valid");
+  validateStatus.classList.remove("is-invalid");
 } else {
-  validateAssignedTo.classList.add("is-invalid");
-  validateAssignedTo.classList.remove("is-valid");
+  validateStatus.classList.add("is-invalid");
+  validateStatus.classList.remove("is-valid");
   validationFail++;
 }
 // If validation fails then function will not proceed further and
@@ -74,6 +75,15 @@ if (validationFail > 0) {
   return;
 }
 });
+
+//TASK 5
+// Finding and Display the Date Object
+const newTaskDueDate = document.querySelector("#new-task-due-date");
+let today = new Date();
+const [month, day, year] = [today.getMonth(), today.getDate(), today.getFullYear()];
+let dateString = `Current Date: ${day} / ${month} / ${year}`;
+newTaskDueDate.innerHTML = dateString;
+
 
 
 

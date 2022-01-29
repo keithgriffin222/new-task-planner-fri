@@ -78,12 +78,11 @@ if (validationFail > 0) {
 
 //TASK 5
 // Finding and Display the Date Object
-const newTaskDueDate = document.querySelector("#new-task-due-date");
+const dateElement = document.querySelector("#date-element");
 let today = new Date();
 const [month, day, year] = [today.getMonth(), today.getDate(), today.getFullYear()];
 let dateString = `Current Date: ${day} / ${month} / ${year}`;
-newTaskDueDate.innerHTML = dateString;
-
+dateElement.innerHTML = dateString;
 
 
 

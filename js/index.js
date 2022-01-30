@@ -83,6 +83,9 @@ let today = new Date();
 const [month, day, year] = [today.getMonth() +1, today.getDate(), today.getFullYear()];
 let dateString = `Current Date: ${day} / ${month} / ${year}`;
 dateElement.innerHTML = dateString;
+console.log("Date"+dateElement)
+
+//Task 6
 
 
 

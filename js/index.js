@@ -81,9 +81,9 @@ sameer.addTask(validateName.value, validateDescription.value, validateAssignedTo
 console.log(sameer.tasks);
 console.log(sameer.tasks[0].task.name);
 let row = '<li class="list-group-item" id="Row-' + sameer.tasks[0].task.id + '">' +
-        '<div class="card bg-light">' +
-        '<div class="card-body">' +
-        '<span class="badge badge-success">' + sameer.tasks[0].task.status + '</span>' +
+       '<div class="card bg-light">' +
+       '<div class="card-body">' +
+       '<span class="badge badge-success">' + sameer.tasks[0].task.status + '</span>' +
         '<h5 class="card-title"> Task: ' + sameer.tasks[0].task.name + '</h5>' + 
         '<p class="card-text">Description: ' + sameer.tasks[0].task.description + '</p>' +
         '<p class="card-text font-weight-bold">Assigned To: ' + sameer.tasks[0].task.assignedTo + '</p>' +
@@ -95,7 +95,7 @@ let row = '<li class="list-group-item" id="Row-' + sameer.tasks[0].task.id + '">
         '</div>' +
         '</li>';
         $(".list-group").append(row);
-});
+}); //
 
 //TASK 5
 // Finding and Display the Date Object
@@ -105,6 +105,33 @@ const [month, day, year] = [today.getMonth() +1, today.getDate(), today.getFullY
 let dateString = `Current Date: ${day} / ${month} / ${year}`;
 dateElement.innerHTML = dateString;
 console.log("Date"+dateElement)
+
+    clearFormFields();
+    taskManager.render();
+
+    const taskHtml = createTaskHtml(
+      task.name,
+      task.description,
+      task.assignedTo,
+      formattedDate,
+      task.status
+    );
+
+    // Push it to the tasksHtmlList array
+    tasksHtmlList.push(taskHtml);
+
+  
+
+  // Create the tasksHtml by joining each item in the tasksHtmlList
+  // with a new line in between each item.
+  const tasksHtml = tasksHtmlList.join("\n");
+
+  // Set the inner html of the tasksList on the page
+  const tasksList = document.querySelector("#task-list");
+  tasksList.innerHTML = tasksHtml;
+  
+
+
 
 //Task 6
 

@@ -84,11 +84,11 @@ let row = '<li class="list-group-item" id="Row-' + sameer.tasks[0].task.id + '">
         '<div class="card bg-light">' +
         '<div class="card-body">' +
         '<span class="badge badge-success">' + sameer.tasks[0].task.status + '</span>' +
-        '<h5 class="card-title"> Task:' + sameer.tasks[0].task.name + '</h5>' + 
-        '<p class="card-text">Discription:' + sameer.tasks[0].task.description + '</p>' +
-        '<p class="card-text font-weight-bold">Assigned To:' + sameer.tasks[0].task.assignedTo + '</p>' +
-        '<p class="card-text">Due Date:' + sameer.tasks[0].task.dueDate + '</p>' +
-        '<p class="card-text">Status:' + sameer.tasks[0].task.status + '</p>' +
+        '<h5 class="card-title"> Task: ' + sameer.tasks[0].task.name + '</h5>' + 
+        '<p class="card-text">Description: ' + sameer.tasks[0].task.description + '</p>' +
+        '<p class="card-text font-weight-bold">Assigned To: ' + sameer.tasks[0].task.assignedTo + '</p>' +
+        '<p class="card-text">Due Date: ' + sameer.tasks[0].task.dueDate + '</p>' +
+        '<p class="card-text">Status: ' + sameer.tasks[0].task.status + '</p>' +
         '<button type="button" class="btn btn-primary">Edit</button>' +
         '<button type="button" class="btn btn-danger">Delete</button>' +
         '</div>' +

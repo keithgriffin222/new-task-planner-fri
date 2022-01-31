@@ -1,5 +1,6 @@
 // TASK 4
 const taskForm = document.querySelector("#taskForm");
+
 //console.log(taskForm.value);
 
 taskForm.addEventListener("submit", (event) => {
@@ -15,8 +16,8 @@ taskForm.addEventListener("submit", (event) => {
   console.log("Task Name :" + validateName.value.length);
   console.log("Task Description :" + validateDescription.value.length);
   console.log("Task Assigned To :" + validateAssignedTo.value.length);
-  console.log("Task Due Date :" + validateDueDate.value);
-  console.log("Task Status:" + validateStatus.value);
+  console.log("Task Due Date :" + validateDueDate);
+  console.log("Task Status:" + validateStatus);
 
 // Form validation for Task Name Field min length 5
 if (validateName.value.length > 5) {
@@ -74,6 +75,25 @@ if (validationFail > 0) {
   validationFail = 0;
   return;
 }
+const sameer = new TaskManager((new Date()).getTime());
+sameer.addTask(validateName.value, validateDescription.value, validateAssignedTo.value, validateDueDate.value, validateStatus.value);
+console.log(sameer.tasks);
+console.log(sameer.tasks[0].task.name);
+let row = '<li class="list-group-item" id="Row-' + sameer.tasks[0].task.id + '">' +
+        '<div class="card bg-light">' +
+        '<div class="card-body">' +
+        '<span class="badge badge-success">' + sameer.tasks[0].task.status + '</span>' +
+        '<h5 class="card-title"> Task:' + sameer.tasks[0].task.name + '</h5>' + 
+        '<p class="card-text">Discription:' + sameer.tasks[0].task.description + '</p>' +
+        '<p class="card-text font-weight-bold">Assigned To:' + sameer.tasks[0].task.assignedTo + '</p>' +
+        '<p class="card-text">Due Date:' + sameer.tasks[0].task.dueDate + '</p>' +
+        '<p class="card-text">Status:' + sameer.tasks[0].task.status + '</p>' +
+        '<button type="button" class="btn btn-primary">Edit</button>' +
+        '<button type="button" class="btn btn-danger">Delete</button>' +
+        '</div>' +
+        '</div>' +
+        '</li>';
+        $(".list-group").append(row);
 });
 
 //TASK 5
@@ -87,56 +107,3 @@ console.log("Date"+dateElement)
 
 //Task 6
 
-
-
-//DONT USE THIS CODE!!!
-/*const taskName = document.querySelector("#taskname");
-const taskDescription = document.querySelector("#taskdescription");
-const taskAssign = document.querySelector("#taskassign");
-const taskDate = document.querySelector("#taskdate");
-const taskStatus = document.querySelector("#taskstatus");
-btnSubmit.addEventListener("click", validFormFieldInput);
-
-function validFormFieldInput(data) { 
-    if (taskName==null || taskName==""){  
-        errorMessage("Name can't be blank");  
-        return false;  
-      } else { (taskName.length<5)   
-        errorMessage("Password must be at least 5 characters long.");  
-        return false;  
-        }  
-      } */
-
-
-      /*const validateFields = (fields) => {
-        let fieldValues = [
-          taskname.value,
-          taskdescription.value,
-          taskassign.value,
-          taskstatus.value,
-          taskdate.value,
-        ];
-      
-        // Validates first 3 fields for length < 5
-        for (let i = 0; i < 3; i++) {
-          if (fieldValues[i] === "" || fieldValues[i].length < 5) {
-            fields[i].classList.remove("is-valid");
-            fields[i].classList.add("is-invalid");
-            invalidFields++;
-          } else {
-            fields[i].classList.remove("is-invalid");
-            fields[i].classList.add("is-valid");
-          }
-        }
-
-        // Validates first 3 fields for length < 5
-        for (let i = 0; i < 3; i++) {
-          if (fieldValues[i] === "" || fieldValues[i].length < 5) {
-            fields[i].classList.remove("is-valid");
-            fields[i].classList.add("is-invalid");
-            invalidFields++;
-          } else {
-            fields[i].classList.remove("is-invalid");
-            fields[i].classList.add("is-valid");
-          }
-        }*/

@@ -55,6 +55,7 @@
                                 <form id="taskForm" class="needs-validation" novalidate>
                                             <div class="form-group">
                                                 <label class="name">Task</label>
+                                                <input type="hidden" class="form-control" id="id-hidden-value" value="0">
                                                 <input type="text" class="form-control" id="new-task-name" placeholder="" required>
                                                     <div class="invalid-feedback">
                                                     Please choose a valid name.
@@ -134,10 +135,10 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="js/index.js"></script>
         <script src="js/taskManager.js"></script>
+        <script>
+            let tm = new TaskManager((new Date()).getTime());
+            tm.load();
+            tm.render(-1);
+        </script>
   </body>
-  <span id="date-element"></span>
-  <div class="d-flex justify-content-center my-5">
-    <div>
-      <div class="row">
-
 </html>

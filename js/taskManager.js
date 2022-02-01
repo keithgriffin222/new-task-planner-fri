@@ -17,7 +17,7 @@ class TaskManager {
           status: status,
         };
         if(id == 0) {
-          tasks.push(task);
+          tasks.push(this.task);
         } else {
           let tempArray = [];
           for(let i = 0; i < tasks.length; i++) {

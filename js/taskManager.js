@@ -47,15 +47,15 @@ class TaskManager {
           '<div class="card bg-light">' +
           '<div class="card-body">' +
           '<span class="badge badge-success"><label id="Status-' + tk.id + '">' + tk.status + '</label></span>' +
-          '<h5 class="card-title"> Task: ' + tk.name + '</h5>' + 
-          '<p class="card-text">Description: ' + tk.description + '</p>' +
-          '<p class="card-text font-weight-bold">Assigned To: ' + tk.assignedTo + '</p>' +
-          '<p class="card-text">Due Date: ' + tk.dueDate + '</p>' +
-          '<p class="card-text">Status: <label id="St-' + tk.id + '">' + tk.status + '</label></p>' +
+          '<h5 class="card-title"> Task:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + tk.name + '</h5>' + 
+          '<p class="card-text">Description:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + tk.description + '</p>' +
+          '<p class="card-text font-weight-bold">Assigned To:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + tk.assignedTo + '</p>' +
+          '<p class="card-text">Due Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + tk.dueDate + '</p>' +
+          '<p class="card-text">Status: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label id="St-' + tk.id + '">' + tk.status + '</label></p>' +
           '<button type="button" class="btn btn-primary" id="BtnDn-' + tk.id + '" onClick="completeTask(\'' + tk.id+ '\')">Mark as Done</button>' +
-          "&nbsp;&nbsp;&nbsp;&nbsp;" +
+          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
           '<button type="button" class="btn btn-danger" id="BtnDn-' + tk.id + '" onClick="deleteTask(\'' + tk.id+ '\')">Delete</button>' +
-          "&nbsp;&nbsp;&nbsp;&nbsp;" +
+          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
           '<button type="button" class="btn btn-primary" id="BtnDn-' + tk.id + '" onClick="updateTask(\'' + tk.id+ '\')">Update</button>' +
           '</div>' +
           '</div>' +
@@ -115,7 +115,7 @@ class TaskManager {
     let tm = new TaskManager();
     tm.save();
   }
-
+// delete task added
   const deleteTask = (id) => {
     $('#Row-' +id).remove();
     let tempArr = [];
@@ -129,7 +129,7 @@ class TaskManager {
     let tm = new TaskManager();
     tm.save();
   }
-
+// task update added
   const updateTask = (id) => {
     for(let i = 0; i < tasks.length; i++) {
       let obj = tasks[i];

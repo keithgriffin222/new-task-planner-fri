@@ -54,9 +54,9 @@ class TaskManager {
           '<p class="card-text">Status: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label id="St-' + tk.id + '">' + tk.status + '</label></p>' +
           '<button type="button" class="btn btn-primary" id="BtnDn-' + tk.id + '" onClick="completeTask(\'' + tk.id+ '\')">Mark as Done</button>' +
           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
-          '<button type="button" class="btn btn-danger" id="BtnDn-' + tk.id + '" onClick="deleteTask(\'' + tk.id+ '\')">Delete</button>' +
+          '<button type="button" class="btn btn-danger" id="BtnDel-' + tk.id + '" onClick="deleteTask(\'' + tk.id+ '\')">Delete</button>' +
           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
-          '<button type="button" class="btn btn-primary" id="BtnDn-' + tk.id + '" onClick="updateTask(\'' + tk.id+ '\')">Update</button>' +
+          '<button type="button" class="btn btn-primary" id="BtnUpd-' + tk.id + '" onClick="updateTask(\'' + tk.id+ '\')">Update</button>' +
           '</div>' +
           '</div>' +
           '</li>';
@@ -103,7 +103,7 @@ class TaskManager {
     console.log("CompleteTask:" + id);
     $('#Status-' +id).text("Done");
     $('#St-' +id).text("Done");
-    $('#BtnDn-' +id).addClass("done-button");
+    //$('#BtnDn-' +id).addClass("done-button");
     let tempArr = [];
     for(let i = 0; i < tasks.length; i++) {
       let obj = tasks[i];
@@ -114,6 +114,7 @@ class TaskManager {
     }
     let tm = new TaskManager();
     tm.save();
+    $('#BtnDn-' +id).hide();
   }
 // delete task added
   const deleteTask = (id) => {

@@ -83,6 +83,7 @@ sameer.save(idHidden);
 console.log(sameer.tasks);
 sameer.render();
 clearFormFields();
+$('#exampleModal').modal('hide');
 }); //
 
 //TASK 5

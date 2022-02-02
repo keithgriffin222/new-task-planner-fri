@@ -15,10 +15,14 @@
 
 
   <body>
-
         <header class="text-center">
             <h1>Task Manager</h1>
         </header>
+
+        <!--  -->
+        <span id="date-element"></span>
+        <div class="d-flex justify-content-center my-5">
+        <div>
 
             <!-- Modal Start -->
         <!-- Add Task Button -->
@@ -79,9 +83,11 @@
                                                     </div>
                                                     
                                             </div>
+                                           
                                             <div class="form-group">
                                                 <label for="exampleFormControlSelect1">Status</label>
                                                 <select class="form-control" id="new-task-status" required>
+                                                    <option selected></option>
                                                     <option>To Do</option>
                                                     <option>In Progress</option>
                                                     <option>Review</option>
@@ -95,7 +101,7 @@
                                                 <!-- <span id="errorMessage"></span>
                                                 <input type="text" class="form-control m-3" /> <br /> -->
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" id= "btnClose">Close</button>
-                                                <button type="submit" class="btn btn-primary" id = "btnSubmit">Save changes</button>
+                                                <button type="submit" class="btn btn-primary" id = "btnSubmit">Submit</button>
                                             </div>
                                 </form>
                                  <!-- Form End -->
@@ -109,80 +115,17 @@
     </div>
         <!-- Modal End -->
 
-        <!-- Card Start -->
+       
         <div class="container" id="taskCards">
                 <div class="row">
                     <div class="col-sm-12">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="card bg-light">
-                                <div class="card-body">
-                                <span class="badge badge-success">TODO</span>
-                                <h5 class="card-title">Clean the Kitchen</h5>
-                                <p class="card-text">Sweep the floor, clean the pans and wipe the tables.</p>
-                                <p class="card-text font-weight-bold">John</p>
-                                <p class="card-text">10/5/2022</p>
-                                <button type="button" class="btn btn-primary">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                                </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="card bg-light">
-                                <div class="card-body">
-                                <span class="badge badge-success">TODO</span>
-                                <h5 class="card-title">Fill the soda machine</h5>
-                                <p class="card-text">Fill it with Coke, Sprite, Fanta & water.</p>
-                                <p class="card-text font-weight-bold">Mandy</p>
-                                <p class="card-text">10/7/2022</p>
-                                <button type="button" class="btn btn-primary">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                                </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                    <div class="card bg-light">
-                                    <div class="card-body">
-                                    <span class="badge badge-success">TODO</span>
-                                    <h5 class="card-title">Stock the ingredients</h5>
-                                    <p class="card-text">Stock the fridge and cupboards.</p>
-                                    <p class="card-text font-weight-bold">Kyle</p>
-                                    <p class="card-text">11/9/2022</p>
-                                    <button type="button" class="btn btn-primary">Edit</button>
-                                    <button type="button" class="btn btn-danger">Delete</button>
-                                    </div>
-                                    </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="card bg-light">
-                                <div class="card-body">
-                                <span class="badge badge-success">TODO</span>
-                                <h5 class="card-title">Cook the burgers</h5>
-                                <p class="card-text">Fry the patties and organise the burger indredients in the correct order.</p>
-                                <p class="card-text font-weight-bold">Sarah</p>
-                                <p class="card-text">11/20/2022</p>
-                                <button type="button" class="btn btn-primary">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                                </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="card bg-light">
-                                <div class="card-body">
-                                <span class="badge badge-success">TODO</span>
-                                <h5 class="card-title">Serve the customers</h5>
-                                <p class="card-text">Take the orders from the customers and serve them food.</p>
-                                <p class="card-text font-weight-bold">Daniel</p>
-                                <p class="card-text">12/4/2022</p>
-                                <button type="button" class="btn btn-primary">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                                </div>
-                                </div></li>
-                          </ul>
+                        <ul class="list-group" id = "taskList"> 
+                     
+                         </ul>
                     </div>
                 </div>
         </div>
-             <!-- Card End -->
+              
 
 
         <!-- Optional JavaScript -->
@@ -190,8 +133,8 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="index.js"></script>
-        <script src="tasjManager.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/taskManager.js"></script>
   </body>
   
   <span id="date-element"></span>
@@ -201,5 +144,3 @@
 
 </html>
 
-
-label for="taskDueDate">Due Date* </label><span id="errMsgDueDate"> </span>

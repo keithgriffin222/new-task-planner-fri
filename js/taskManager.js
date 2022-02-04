@@ -56,12 +56,14 @@ class TaskManager {
           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
           '<button type="button" class="btn btn-danger" id="BtnDel-' + tk.id + '" onClick="deleteTask(\'' + tk.id+ '\')">Delete</button>' +
           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
-          '<button type="button" class="btn btn-primary" id="BtnUpd-' + tk.id + '" onClick="updateTask(\'' + tk.id+ '\')">Update</button>' +
+          //'<button type="button" class="btn btn-primary" id="BtnUpd-' + tk.id + '" onClick="updateTask(\'' + tk.id+ '\')">Update</button>' +
           '</div>' +
           '</div>' +
           '</li>';
           $(".list-group").append(row);
+          if(tk.status=='Done')(completeTask(tk.id));
         }
+        
       }
 
     save() {

@@ -1,5 +1,3 @@
-# new-task-planner-fri
-# new-task-planner-fri
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Task_Manager_Project_0"></a><strong>Task Manager Project</strong></h1>
 <h3 class="code-line" data-line-start=2 data-line-end=3 ><a id="_What_is_our_App_about__2"></a><em>What is our App about?</em></h3>
 <p class="has-line-data" data-line-start="3" data-line-end="6">This App was created with the intention of helping restaurants organise their tasks. We wanted this app to contain a nice layout that engages users and help them organise their tasks into lists as well as create a detailed form with a name, description, assigend to, status and due date, so that restaurant employees can keep track of tasks important that need to be completed.<br>
